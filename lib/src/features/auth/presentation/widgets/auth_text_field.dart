@@ -19,9 +19,14 @@ class AuthTextField extends StatelessWidget {
         autocorrect: labelText == 'Пароль' ? false : true,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(10),
-          suffixIcon: Icon(labelText == 'Пароль' ? Icons.remove_red_eye : null),
+          suffixIcon: Icon(
+              labelText.contains('Пароль') || labelText.contains('пароль')
+                  ? Icons.remove_red_eye
+                  : null),
           border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            borderRadius: BorderRadius.all(
+              Radius.circular(5.0),
+            ),
           ),
           labelText: labelText,
         ),

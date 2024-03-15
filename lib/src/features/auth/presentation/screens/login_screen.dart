@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'auth_text_field.dart';
-import 'auth_button.dart';
+import '../widgets/auth_text_field.dart';
+import '../widgets/auth_button.dart';
 
-@RoutePage(name: 'RegisterScreenRoute')
-class RegisterScreen extends ConsumerWidget {
-  const RegisterScreen({super.key});
+@RoutePage(name: 'LoginScreenRoute')
+class LoginScreen extends ConsumerWidget {
+  const LoginScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -23,14 +25,17 @@ class RegisterScreen extends ConsumerWidget {
                 labelText: 'Логин',
               ),
               const AuthTextField(labelText: 'Пароль'),
-              const AuthTextField(labelText: 'Повторите пароль'),
               const SizedBox(height: 20),
               AuthButton(
-                onPressed: () {
-                  AutoRouter.of(context).removeLast();
-                },
-                label: const Text('Создать аккаунт'),
+                onPressed: () {},
+                label: const Text('Войти'),
               ),
+              AuthButton(
+                onPressed: () {
+                  AutoRouter.of(context).pushNamed('/register');
+                },
+                label: const Text('Регистрация'),
+              )
             ],
           ),
         ),
