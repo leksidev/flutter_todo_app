@@ -10,6 +10,7 @@ class DeadlineDateTimePicker extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final talker = ref.watch(talkerProvider);
     final switchValue = ref.watch(deadlineSwitcherProvider);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
