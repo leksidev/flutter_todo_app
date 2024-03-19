@@ -11,5 +11,7 @@ class AppRouter extends _$AppRouter {
   List<AutoRoute> get routes => [
         AutoRoute(page: LoginScreenRoute.page, path: '/'),
         AutoRoute(page: RegisterScreenRoute.page, path: '/register'),
+        AutoRoute(page: ProjectsListRoute.page, path: '/projects_list'),
+        AutoRoute(page: AddTaskRoute.page, path: '/add_task'),
       ];
 }
