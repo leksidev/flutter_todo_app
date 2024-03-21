@@ -28,7 +28,9 @@ class LoginScreen extends ConsumerWidget {
               const SizedBox(height: 20),
               AuthButton(
                 onPressed: () {
-                  AutoRouter.of(context).pushNamed('/projects_list');
+                  AutoRouter.of(context).pushNamed(
+                    '/projects',
+                  );
                 },
                 label: const Text('Войти'),
               ),

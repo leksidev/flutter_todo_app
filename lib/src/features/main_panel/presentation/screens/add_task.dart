@@ -1,12 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_todo_app/src/common_widgets/main_navigation_bar.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/states/add_task_providers.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/deadline_datetime_picker.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/task_text_field.dart';
 
-@RoutePage(name: 'AddTaskRoute')
+@RoutePage(name: 'AddTaskScreenRoute')
 class AddTask extends ConsumerWidget {
   const AddTask({super.key});
 
@@ -15,11 +14,9 @@ class AddTask extends ConsumerWidget {
     final deadlineTime = ref.watch(deadlineTimeProvider);
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Добавить задачу'),
       ),
-      bottomNavigationBar: const MainNavigationBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
