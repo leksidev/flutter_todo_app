@@ -1,12 +1,11 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/main_navigation_bar.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/project_card.dart';
+import 'package:auto_route/auto_route.dart';
 
-@RoutePage(name: 'ProjectsListRoute')
-class UserMainScreen extends ConsumerWidget {
-  const UserMainScreen({super.key});
+@RoutePage(name: 'ProjectsScreenRoute')
+class ProjectsScreen extends ConsumerWidget {
+  const ProjectsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -23,89 +22,49 @@ class UserMainScreen extends ConsumerWidget {
       ),
     );
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Проекты и задачи'),
-        ),
-        resizeToAvoidBottomInset: false,
-        bottomNavigationBar: const MainNavigationBar(),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const Expanded(
+          flex: 1,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Expanded(
-                flex: 1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Дедлайны',
-                            style: TextStyle(
-                              fontSize: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium!
-                                  .fontSize,
-                            ),
-                          ),
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Column(
-                                children: [
-                                  Text('Всего задач:'),
-                                  Text('0'),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  Text('На сегодня:'),
-                                  Text('0'),
-                                ],
-                              ),
-                              Column(
-                                children: [
-                                  Text('На неделю:'),
-                                  Text('0'),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Мои проекты',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                flex: 8,
-                child: CustomScrollView(
-                  primary: false,
-                  slivers: <Widget>[
-                    SliverGrid.count(
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10,
-                      crossAxisCount: 2,
-                      children: <Widget>[
-                        ...projectsCards,
+                    // Text(
+                    //   'Дедлайны',
+                    //   style: TextStyle(
+                    //     fontSize: Theme.of(context)
+                    //         .textTheme
+                    //         .titleMedium!
+                    //         .fontSize,
+                    //   ),
+                    // ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            Text('Всего задач:'),
+                            Text('0'),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('На сегодня:'),
+                            Text('0'),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text('На неделю:'),
+                            Text('0'),
+                          ],
+                        ),
                       ],
                     ),
                   ],
@@ -114,7 +73,35 @@ class UserMainScreen extends ConsumerWidget {
             ],
           ),
         ),
-      ),
+        Expanded(
+          flex: 1,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Мои проекты',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          flex: 7,
+          child: CustomScrollView(
+            primary: false,
+            slivers: <Widget>[
+              SliverGrid.count(
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                crossAxisCount: 2,
+                children: <Widget>[
+                  ...projectsCards,
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

@@ -5,7 +5,7 @@ import 'package:flutter_todo_app/src/features/main_panel/presentation/states/add
 import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/deadline_datetime_picker.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/task_text_field.dart';
 
-@RoutePage(name: 'AddTaskRoute')
+@RoutePage(name: 'AddTaskScreenRoute')
 class AddTask extends ConsumerWidget {
   const AddTask({super.key});
 
@@ -14,7 +14,6 @@ class AddTask extends ConsumerWidget {
     final deadlineTime = ref.watch(deadlineTimeProvider);
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Добавить задачу'),
       ),
