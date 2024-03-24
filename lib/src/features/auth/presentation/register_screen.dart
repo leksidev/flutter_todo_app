@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../widgets/auth_text_field.dart';
-import '../widgets/auth_button.dart';
+import 'widgets/auth_text_field.dart';
+import '../../../common_widgets/colored_button.dart';
 
 @RoutePage(name: 'RegisterScreenRoute')
 class RegisterScreen extends ConsumerWidget {
@@ -19,13 +19,20 @@ class RegisterScreen extends ConsumerWidget {
           height: 400,
           child: Column(
             children: [
-              const AuthTextField(
+              AuthTextField(
                 labelText: 'Логин',
+                controller: TextEditingController(),
               ),
-              const AuthTextField(labelText: 'Пароль'),
-              const AuthTextField(labelText: 'Повторите пароль'),
+              AuthTextField(
+                labelText: 'Пароль',
+                controller: TextEditingController(),
+              ),
+              AuthTextField(
+                labelText: 'Повторите пароль',
+                controller: TextEditingController(),
+              ),
               const SizedBox(height: 20),
-              AuthButton(
+              ColoredButton(
                 onPressed: () {
                   AutoRouter.of(context).removeLast();
                 },

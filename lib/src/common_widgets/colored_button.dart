@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class AuthButton extends StatelessWidget {
+class ColoredButton extends StatelessWidget {
   final Function()? onPressed;
   final Widget label;
 
-  const AuthButton({
+  const ColoredButton({
     super.key,
     required this.onPressed,
     required this.label,

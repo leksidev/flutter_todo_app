@@ -42,7 +42,7 @@ class AddTask extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ElevatedButton(
+                  FilledButton(
                     onPressed: () {},
                     child: const Text('Добавить задачу'),
                   ),
