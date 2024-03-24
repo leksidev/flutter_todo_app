@@ -11,7 +11,7 @@ class TasksScreen extends StatelessWidget {
     return Center(
       child: Column(children: [
         const Text('Задачи'),
-        ElevatedButton(
+        FilledButton(
           onPressed: () =>
               AutoRouter.of(context).push(const AddTaskScreenRoute()),
           child: const Text('Добавить задачу'),
