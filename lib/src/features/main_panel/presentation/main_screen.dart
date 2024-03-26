@@ -39,6 +39,13 @@ class MainScreen extends ConsumerWidget {
               ProjectsScreenRoute(),
               TasksScreenRoute(),
             ],
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                AutoRouter.of(context).pushNamed('/add_task');
+              },
+              heroTag: 'add_task',
+              child: const Icon(Icons.add),
+            ),
             bottomNavigationBuilder: (_, tabsRouter) {
               return NavigationBar(
                 selectedIndex: tabsRouter.activeIndex,
@@ -46,12 +53,21 @@ class MainScreen extends ConsumerWidget {
                 destinations: const [
                   NavigationDestination(
                     icon: Icon(Icons.home),
-                    label: 'Проекты',
+                    label: 'Сводка',
                     enabled: true,
                   ),
                   NavigationDestination(
-                    icon: Icon(Icons.task),
-                    label: 'Задачи',
+                    icon: Icon(Icons.folder),
+                    label: 'Проекты',
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.checklist),
+                    label: 'Активность',
+                    enabled: true,
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.notifications),
+                    label: 'Уведомления',
                     enabled: true,
                   ),
                 ],

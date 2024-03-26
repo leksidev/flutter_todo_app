@@ -32,55 +32,58 @@ class AddTask extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text(S.of(context).add_task),
-          ),
-          body: SingleChildScrollView(
-            child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  TaskTextField(
-                    flex: 1,
-                    controller: titleController,
-                    labelText: S.of(context).title,
-                    authofocus: true,
-                  ),
-                  const CalendarLine(title: 'Задачи'),
-                  TaskTextField(
-                    flex: 4,
-                    controller: descriptionController,
-                    maxLength: 1000,
-                    maxLines: 10,
-                    labelText: S.of(context).description,
-                    authofocus: false,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      FilledButton(
-                        onPressed: () {
-                          context.read<TaskBloc>().add(
-                                CreateNewTask(
-                                  task: Task(
-                                    id: titleController.text.trim().length,
-                                    title: titleController.text.trim(),
-                                    description:
-                                        descriptionController.text.trim(),
-                                    createdDate: DateTime.now(),
-                                    deadlineDate: DateTime.now(),
+        return Hero(
+          tag: 'add_task',
+          child: Scaffold(
+            appBar: AppBar(
+              title: Text(S.of(context).add_task),
+            ),
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 10.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TaskTextField(
+                      flex: 1,
+                      controller: titleController,
+                      labelText: S.of(context).title,
+                      authofocus: true,
+                    ),
+                    const CalendarLine(title: 'Задачи'),
+                    TaskTextField(
+                      flex: 4,
+                      controller: descriptionController,
+                      maxLength: 1000,
+                      maxLines: 10,
+                      labelText: S.of(context).description,
+                      authofocus: false,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        FilledButton(
+                          onPressed: () {
+                            context.read<TaskBloc>().add(
+                                  CreateNewTask(
+                                    task: Task(
+                                      id: titleController.text.trim().length,
+                                      title: titleController.text.trim(),
+                                      description:
+                                          descriptionController.text.trim(),
+                                      createdDate: DateTime.now(),
+                                      deadlineDate: DateTime.now(),
+                                    ),
                                   ),
-                                ),
-                              );
-                        },
-                        child: Text(S.of(context).add_task),
-                      ),
-                    ],
-                  )
-                ],
+                                );
+                          },
+                          child: Text(S.of(context).add_task),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),
