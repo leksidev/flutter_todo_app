@@ -16,9 +16,11 @@ abstract class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     AddTaskScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<AddTaskScreenRouteArgs>(
+          orElse: () => const AddTaskScreenRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const AddTask(),
+        child: AddTask(key: args.key),
       );
     },
     LoginScreenRoute.name: (routeData) {
@@ -63,16 +65,31 @@ abstract class _$AppRouter extends RootStackRouter {
 
 /// generated route for
 /// [AddTask]
-class AddTaskScreenRoute extends PageRouteInfo<void> {
-  const AddTaskScreenRoute({List<PageRouteInfo>? children})
-      : super(
+class AddTaskScreenRoute extends PageRouteInfo<AddTaskScreenRouteArgs> {
+  AddTaskScreenRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
           AddTaskScreenRoute.name,
+          args: AddTaskScreenRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'AddTaskScreenRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<AddTaskScreenRouteArgs> page =
+      PageInfo<AddTaskScreenRouteArgs>(name);
+}
+
+class AddTaskScreenRouteArgs {
+  const AddTaskScreenRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'AddTaskScreenRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

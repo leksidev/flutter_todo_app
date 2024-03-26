@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_todo_app/src/features/task/presentation/bloc/task_bloc.dart';
 import 'generated/l10n.dart';
 
 import 'package:flutter/material.dart';
@@ -49,6 +50,9 @@ class MainApp extends ConsumerWidget {
       providers: [
         BlocProvider<AuthBloc>(
           create: (context) => AuthBloc(),
+        ),
+        BlocProvider<TaskBloc>(
+          create: (context) => TaskBloc(),
         ),
       ],
       child: MaterialApp.router(

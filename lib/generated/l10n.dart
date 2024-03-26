@@ -99,6 +99,236 @@ class S {
       args: [],
     );
   }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Title`
+  String get title {
+    return Intl.message(
+      'Title',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add task`
+  String get add_task {
+    return Intl.message(
+      'Add task',
+      name: 'add_task',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mon`
+  String get monday {
+    return Intl.message(
+      'Mon',
+      name: 'monday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tue`
+  String get tuesday {
+    return Intl.message(
+      'Tue',
+      name: 'tuesday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wed`
+  String get wednesday {
+    return Intl.message(
+      'Wed',
+      name: 'wednesday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thu`
+  String get thursday {
+    return Intl.message(
+      'Thu',
+      name: 'thursday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fri`
+  String get friday {
+    return Intl.message(
+      'Fri',
+      name: 'friday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sat`
+  String get saturday {
+    return Intl.message(
+      'Sat',
+      name: 'saturday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sun`
+  String get sunday {
+    return Intl.message(
+      'Sun',
+      name: 'sunday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `January`
+  String get january {
+    return Intl.message(
+      'January',
+      name: 'january',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `February`
+  String get february {
+    return Intl.message(
+      'February',
+      name: 'february',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `March`
+  String get march {
+    return Intl.message(
+      'March',
+      name: 'march',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `May`
+  String get may {
+    return Intl.message(
+      'May',
+      name: 'may',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `April`
+  String get april {
+    return Intl.message(
+      'April',
+      name: 'april',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `June`
+  String get june {
+    return Intl.message(
+      'June',
+      name: 'june',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `July`
+  String get july {
+    return Intl.message(
+      'July',
+      name: 'july',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `August`
+  String get august {
+    return Intl.message(
+      'August',
+      name: 'august',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `September`
+  String get september {
+    return Intl.message(
+      'September',
+      name: 'september',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `October`
+  String get october {
+    return Intl.message(
+      'October',
+      name: 'october',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `November`
+  String get november {
+    return Intl.message(
+      'November',
+      name: 'november',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `December`
+  String get december {
+    return Intl.message(
+      'December',
+      name: 'december',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tasks`
+  String get tasks {
+    return Intl.message(
+      'Tasks',
+      name: 'tasks',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

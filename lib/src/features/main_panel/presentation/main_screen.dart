@@ -18,9 +18,10 @@ class MainScreen extends ConsumerWidget {
     return BlocBuilder<AuthBloc, AuthState>(
       builder: (context, state) {
         if (state is AuthInitial) {
-          return Scaffold(
-            body: Center(
-              child: Column(mainAxisSize: MainAxisSize.min, children: [
+          return Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
                 const Text('Вы не авторизованы'),
                 ElevatedButton(
                   onPressed: () {
@@ -28,7 +29,7 @@ class MainScreen extends ConsumerWidget {
                   },
                   child: const Text('Войти'),
                 ),
-              ]),
+              ],
             ),
           );
         }

@@ -22,12 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add_task": MessageLookupByLibrary.simpleMessage("Add task"),
+        "april": MessageLookupByLibrary.simpleMessage("April"),
+        "august": MessageLookupByLibrary.simpleMessage("August"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create account"),
+        "december": MessageLookupByLibrary.simpleMessage("December"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "february": MessageLookupByLibrary.simpleMessage("February"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Remember password"),
+        "friday": MessageLookupByLibrary.simpleMessage("Fri"),
+        "january": MessageLookupByLibrary.simpleMessage("January"),
+        "july": MessageLookupByLibrary.simpleMessage("July"),
+        "june": MessageLookupByLibrary.simpleMessage("June"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "march": MessageLookupByLibrary.simpleMessage("March"),
+        "may": MessageLookupByLibrary.simpleMessage("May"),
+        "monday": MessageLookupByLibrary.simpleMessage("Mon"),
+        "november": MessageLookupByLibrary.simpleMessage("November"),
+        "october": MessageLookupByLibrary.simpleMessage("October"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
-        "register": MessageLookupByLibrary.simpleMessage("Register")
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "saturday": MessageLookupByLibrary.simpleMessage("Sat"),
+        "september": MessageLookupByLibrary.simpleMessage("September"),
+        "sunday": MessageLookupByLibrary.simpleMessage("Sun"),
+        "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
+        "thursday": MessageLookupByLibrary.simpleMessage("Thu"),
+        "title": MessageLookupByLibrary.simpleMessage("Title"),
+        "tuesday": MessageLookupByLibrary.simpleMessage("Tue"),
+        "wednesday": MessageLookupByLibrary.simpleMessage("Wed")
       };
 }
