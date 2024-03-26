@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "november": MessageLookupByLibrary.simpleMessage("Ноябрь"),
         "october": MessageLookupByLibrary.simpleMessage("Октябрь"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
+        "projects": MessageLookupByLibrary.simpleMessage("Проекты"),
         "register": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "saturday": MessageLookupByLibrary.simpleMessage("Сб"),
         "september": MessageLookupByLibrary.simpleMessage("Сентябрь"),
