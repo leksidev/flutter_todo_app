@@ -22,12 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add_task": MessageLookupByLibrary.simpleMessage("Добавить задачу"),
+        "april": MessageLookupByLibrary.simpleMessage("Апрель"),
+        "august": MessageLookupByLibrary.simpleMessage("Август"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Создать аккаунт"),
+        "december": MessageLookupByLibrary.simpleMessage("Декабрь"),
+        "description": MessageLookupByLibrary.simpleMessage("Описание"),
+        "february": MessageLookupByLibrary.simpleMessage("Февраль"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
+        "friday": MessageLookupByLibrary.simpleMessage("Пт"),
+        "january": MessageLookupByLibrary.simpleMessage("Январь"),
+        "july": MessageLookupByLibrary.simpleMessage("Июль"),
+        "june": MessageLookupByLibrary.simpleMessage("Июнь"),
         "login": MessageLookupByLibrary.simpleMessage("Логин"),
+        "march": MessageLookupByLibrary.simpleMessage("Март"),
+        "may": MessageLookupByLibrary.simpleMessage("Май"),
+        "monday": MessageLookupByLibrary.simpleMessage("Пн"),
+        "november": MessageLookupByLibrary.simpleMessage("Ноябрь"),
+        "october": MessageLookupByLibrary.simpleMessage("Октябрь"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
-        "register": MessageLookupByLibrary.simpleMessage("Регистрация")
+        "register": MessageLookupByLibrary.simpleMessage("Регистрация"),
+        "saturday": MessageLookupByLibrary.simpleMessage("Сб"),
+        "september": MessageLookupByLibrary.simpleMessage("Сентябрь"),
+        "sunday": MessageLookupByLibrary.simpleMessage("Вс"),
+        "tasks": MessageLookupByLibrary.simpleMessage("Задачи"),
+        "thursday": MessageLookupByLibrary.simpleMessage("Чт"),
+        "title": MessageLookupByLibrary.simpleMessage("Заголовок"),
+        "tuesday": MessageLookupByLibrary.simpleMessage("Вт"),
+        "wednesday": MessageLookupByLibrary.simpleMessage("Ср")
       };
 }
