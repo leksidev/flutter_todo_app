@@ -14,6 +14,6 @@ final class AuthSuccess extends AuthState {
 }
 
 final class AuthError extends AuthState {
-  final String error;
+  final AuthException error;
   AuthError(this.error);
 }

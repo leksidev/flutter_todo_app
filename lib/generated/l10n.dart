@@ -489,6 +489,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Uncorrect password`
+  String get uncorrectPassword {
+    return Intl.message(
+      'Uncorrect password',
+      name: 'uncorrectPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uncorrect login`
+  String get uncorrectLogin {
+    return Intl.message(
+      'Uncorrect login',
+      name: 'uncorrectLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too short password`
+  String get tooShortPassword {
+    return Intl.message(
+      'Too short password',
+      name: 'tooShortPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Authentication data not found`
+  String get authenticationDataNotFound {
+    return Intl.message(
+      'Authentication data not found',
+      name: 'authenticationDataNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown authentication exception`
+  String get unknownAuthenticationException {
+    return Intl.message(
+      'Unknown authentication exception',
+      name: 'unknownAuthenticationException',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login and password can not be empty`
+  String get loginAndPasswordCanNotBeEmpty {
+    return Intl.message(
+      'Login and password can not be empty',
+      name: 'loginAndPasswordCanNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

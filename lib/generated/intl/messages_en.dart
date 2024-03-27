@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_task": MessageLookupByLibrary.simpleMessage("Add task"),
         "april": MessageLookupByLibrary.simpleMessage("April"),
         "august": MessageLookupByLibrary.simpleMessage("August"),
+        "authenticationDataNotFound": MessageLookupByLibrary.simpleMessage(
+            "Authentication data not found"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "create": MessageLookupByLibrary.simpleMessage("Create"),
@@ -46,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginAndPasswordCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "Login and password can not be empty"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "march": MessageLookupByLibrary.simpleMessage("March"),
         "may": MessageLookupByLibrary.simpleMessage("May"),
@@ -65,9 +69,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thu"),
         "title": MessageLookupByLibrary.simpleMessage("Title"),
+        "tooShortPassword":
+            MessageLookupByLibrary.simpleMessage("Too short password"),
         "tuesday": MessageLookupByLibrary.simpleMessage("Tue"),
         "unauth_msg":
             MessageLookupByLibrary.simpleMessage("You are not authorized"),
+        "uncorrectLogin":
+            MessageLookupByLibrary.simpleMessage("Uncorrect login"),
+        "uncorrectPassword":
+            MessageLookupByLibrary.simpleMessage("Uncorrect password"),
+        "unknownAuthenticationException": MessageLookupByLibrary.simpleMessage(
+            "Unknown authentication exception"),
         "wednesday": MessageLookupByLibrary.simpleMessage("Wed")
       };
 }

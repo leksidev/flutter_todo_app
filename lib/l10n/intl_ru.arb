@@ -42,5 +42,11 @@
   "light": "Светлая",
   "system": "Системная",
   "change": "Изменить",
-  "enter": "Вход"
+  "enter": "Вход",
+  "uncorrectPassword": "Неправильный пароль",
+  "uncorrectLogin": "Некорректный логин",
+  "tooShortPassword": "Слишком короткий пароль",
+  "authenticationDataNotFound": "Данные аутентификации не найдены",
+  "unknownAuthenticationException": "Неизвестная ошибка аутентификации",
+  "loginAndPasswordCanNotBeEmpty": "Логин и пароль не могут быть пустыми"
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_todo_app/src/exceptions/auth_exceptions.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
@@ -17,18 +18,31 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final login = event.login;
       final password = event.password;
       if (login.isEmpty || password.isEmpty) {
-        return emit(AuthError('Заполните все поля'));
+        return emit(
+          AuthError(
+            AuthDataCanNotBeEmptyException(),
+          ),
+        );
       }
       if (password.length < 6) {
-        return emit(AuthError('Слишком короткий пароль'));
-      }
-      await Future.delayed(const Duration(seconds: 1), () {
         return emit(
-          AuthSuccess('$password-$login'),
+          AuthError(ShortPasswordException()),
         );
-      });
+      }
+      await Future.delayed(
+        const Duration(seconds: 1),
+        () {
+          return emit(
+            AuthSuccess('$password-$login'),
+          );
+        },
+      );
     } catch (e) {
-      emit(AuthError(e.toString()));
+      emit(
+        AuthError(
+          AuthExceptionMapper.map(e),
+        ),
+      );
     }
   }
 
@@ -43,7 +57,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         },
       );
     } catch (e) {
-      emit(AuthError(e.toString()));
+      emit(
+        AuthError(
+          AuthExceptionMapper.map(e),
+        ),
+      );
     }
   }
 }

@@ -28,7 +28,7 @@ class LoginScreen extends ConsumerWidget {
           if (state is AuthError) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text(state.error),
+                content: Text(state.error.message.toString()),
               ),
             );
           }

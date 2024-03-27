@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_task": MessageLookupByLibrary.simpleMessage("Добавить задачу"),
         "april": MessageLookupByLibrary.simpleMessage("Апрель"),
         "august": MessageLookupByLibrary.simpleMessage("Август"),
+        "authenticationDataNotFound": MessageLookupByLibrary.simpleMessage(
+            "Данные аутентификации не найдены"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
         "change": MessageLookupByLibrary.simpleMessage("Изменить"),
         "create": MessageLookupByLibrary.simpleMessage("Создать"),
@@ -46,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("Язык"),
         "light": MessageLookupByLibrary.simpleMessage("Светлая"),
         "login": MessageLookupByLibrary.simpleMessage("Логин"),
+        "loginAndPasswordCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "Логин и пароль не могут быть пустыми"),
         "logout": MessageLookupByLibrary.simpleMessage("Выход"),
         "march": MessageLookupByLibrary.simpleMessage("Март"),
         "may": MessageLookupByLibrary.simpleMessage("Май"),
@@ -65,9 +69,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "theme": MessageLookupByLibrary.simpleMessage("Тема"),
         "thursday": MessageLookupByLibrary.simpleMessage("Чт"),
         "title": MessageLookupByLibrary.simpleMessage("Заголовок"),
+        "tooShortPassword":
+            MessageLookupByLibrary.simpleMessage("Слишком короткий пароль"),
         "tuesday": MessageLookupByLibrary.simpleMessage("Вт"),
         "unauth_msg":
             MessageLookupByLibrary.simpleMessage("Вы не авторизованы"),
+        "uncorrectLogin":
+            MessageLookupByLibrary.simpleMessage("Некорректный логин"),
+        "uncorrectPassword":
+            MessageLookupByLibrary.simpleMessage("Неправильный пароль"),
+        "unknownAuthenticationException": MessageLookupByLibrary.simpleMessage(
+            "Неизвестная ошибка аутентификации"),
         "wednesday": MessageLookupByLibrary.simpleMessage("Ср")
       };
 }
