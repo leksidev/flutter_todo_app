@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_todo_app/generated/l10n.dart';
 import 'package:flutter_todo_app/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_todo_app/src/routing/router.dart';
 
@@ -22,12 +23,12 @@ class MainScreen extends ConsumerWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text('Вы не авторизованы'),
+                Text(S.of(context).unauth_msg),
                 ElevatedButton(
                   onPressed: () {
                     AutoRouter.of(context).pushNamed('/');
                   },
-                  child: const Text('Войти'),
+                  child: Text(S.of(context).enter),
                 ),
               ],
             ),

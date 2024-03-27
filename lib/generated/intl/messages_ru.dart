@@ -25,10 +25,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_task": MessageLookupByLibrary.simpleMessage("Добавить задачу"),
         "april": MessageLookupByLibrary.simpleMessage("Апрель"),
         "august": MessageLookupByLibrary.simpleMessage("Август"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
+        "change": MessageLookupByLibrary.simpleMessage("Изменить"),
+        "create": MessageLookupByLibrary.simpleMessage("Создать"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Создать аккаунт"),
+        "dark": MessageLookupByLibrary.simpleMessage("Темная"),
         "december": MessageLookupByLibrary.simpleMessage("Декабрь"),
+        "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "description": MessageLookupByLibrary.simpleMessage("Описание"),
+        "edit": MessageLookupByLibrary.simpleMessage("Редактировать"),
+        "enter": MessageLookupByLibrary.simpleMessage("Вход"),
         "february": MessageLookupByLibrary.simpleMessage("Февраль"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
@@ -36,7 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "january": MessageLookupByLibrary.simpleMessage("Январь"),
         "july": MessageLookupByLibrary.simpleMessage("Июль"),
         "june": MessageLookupByLibrary.simpleMessage("Июнь"),
+        "language": MessageLookupByLibrary.simpleMessage("Язык"),
+        "light": MessageLookupByLibrary.simpleMessage("Светлая"),
         "login": MessageLookupByLibrary.simpleMessage("Логин"),
+        "logout": MessageLookupByLibrary.simpleMessage("Выход"),
         "march": MessageLookupByLibrary.simpleMessage("Март"),
         "may": MessageLookupByLibrary.simpleMessage("Май"),
         "monday": MessageLookupByLibrary.simpleMessage("Пн"),
@@ -46,12 +56,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "projects": MessageLookupByLibrary.simpleMessage("Проекты"),
         "register": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "saturday": MessageLookupByLibrary.simpleMessage("Сб"),
+        "save": MessageLookupByLibrary.simpleMessage("Сохранить"),
         "september": MessageLookupByLibrary.simpleMessage("Сентябрь"),
+        "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
         "sunday": MessageLookupByLibrary.simpleMessage("Вс"),
+        "system": MessageLookupByLibrary.simpleMessage("Системная"),
         "tasks": MessageLookupByLibrary.simpleMessage("Задачи"),
+        "theme": MessageLookupByLibrary.simpleMessage("Тема"),
         "thursday": MessageLookupByLibrary.simpleMessage("Чт"),
         "title": MessageLookupByLibrary.simpleMessage("Заголовок"),
         "tuesday": MessageLookupByLibrary.simpleMessage("Вт"),
+        "unauth_msg":
+            MessageLookupByLibrary.simpleMessage("Вы не авторизованы"),
         "wednesday": MessageLookupByLibrary.simpleMessage("Ср")
       };
 }

@@ -25,10 +25,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_task": MessageLookupByLibrary.simpleMessage("Add task"),
         "april": MessageLookupByLibrary.simpleMessage("April"),
         "august": MessageLookupByLibrary.simpleMessage("August"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "change": MessageLookupByLibrary.simpleMessage("Change"),
+        "create": MessageLookupByLibrary.simpleMessage("Create"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create account"),
+        "dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "december": MessageLookupByLibrary.simpleMessage("December"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "enter": MessageLookupByLibrary.simpleMessage("Login"),
         "february": MessageLookupByLibrary.simpleMessage("February"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Remember password"),
@@ -36,7 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "january": MessageLookupByLibrary.simpleMessage("January"),
         "july": MessageLookupByLibrary.simpleMessage("July"),
         "june": MessageLookupByLibrary.simpleMessage("June"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "march": MessageLookupByLibrary.simpleMessage("March"),
         "may": MessageLookupByLibrary.simpleMessage("May"),
         "monday": MessageLookupByLibrary.simpleMessage("Mon"),
@@ -46,12 +56,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "projects": MessageLookupByLibrary.simpleMessage("Projects"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "saturday": MessageLookupByLibrary.simpleMessage("Sat"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "september": MessageLookupByLibrary.simpleMessage("September"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sunday": MessageLookupByLibrary.simpleMessage("Sun"),
+        "system": MessageLookupByLibrary.simpleMessage("System"),
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thu"),
         "title": MessageLookupByLibrary.simpleMessage("Title"),
         "tuesday": MessageLookupByLibrary.simpleMessage("Tue"),
+        "unauth_msg":
+            MessageLookupByLibrary.simpleMessage("You are not authorized"),
         "wednesday": MessageLookupByLibrary.simpleMessage("Wed")
       };
 }

@@ -27,5 +27,20 @@
   "november": "November",
   "december": "December",
   "tasks": "Tasks",
-  "projects": "Projects"
+  "projects": "Projects",
+  "unauth_msg": "You are not authorized",
+  "logout": "Logout",
+  "save": "Save",
+  "create": "Create",
+  "cancel": "Cancel",
+  "edit": "Edit",
+  "delete": "Delete",
+  "settings": "Settings",
+  "theme": "Theme",
+  "language": "Language",
+  "dark": "Dark",
+  "light": "Light",
+  "system": "System",
+  "change": "Change",
+  "enter": "Login"
 }

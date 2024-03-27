@@ -339,6 +339,156 @@ class S {
       args: [],
     );
   }
+
+  /// `You are not authorized`
+  String get unauth_msg {
+    return Intl.message(
+      'You are not authorized',
+      name: 'unauth_msg',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Theme`
+  String get theme {
+    return Intl.message(
+      'Theme',
+      name: 'theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark`
+  String get dark {
+    return Intl.message(
+      'Dark',
+      name: 'dark',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light`
+  String get light {
+    return Intl.message(
+      'Light',
+      name: 'light',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `System`
+  String get system {
+    return Intl.message(
+      'System',
+      name: 'system',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get change {
+    return Intl.message(
+      'Change',
+      name: 'change',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get enter {
+    return Intl.message(
+      'Login',
+      name: 'enter',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
