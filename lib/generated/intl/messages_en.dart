@@ -65,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sunday": MessageLookupByLibrary.simpleMessage("Sun"),
         "system": MessageLookupByLibrary.simpleMessage("System"),
+        "taskDetails": MessageLookupByLibrary.simpleMessage("Task details"),
         "tasks": MessageLookupByLibrary.simpleMessage("Tasks"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thu"),

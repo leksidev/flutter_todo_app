@@ -48,5 +48,6 @@
   "tooShortPassword": "Too short password",
   "authenticationDataNotFound": "Authentication data not found",
   "unknownAuthenticationException": "Unknown authentication exception",
-  "loginAndPasswordCanNotBeEmpty": "Login and password can not be empty"
+  "loginAndPasswordCanNotBeEmpty": "Login and password can not be empty",
+  "taskDetails": "Task details"
 }

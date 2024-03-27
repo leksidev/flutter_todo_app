@@ -2,6 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_todo_app/generated/l10n.dart';
+import 'package:flutter_todo_app/src/common_widgets/base_screen.dart';
+import 'package:flutter_todo_app/src/common_widgets/main_title_text.dart';
+import 'package:flutter_todo_app/src/constants/const_sizes.dart';
 import 'package:flutter_todo_app/src/features/task/presentation/widgets/calendar_line.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/widgets/task_text_field.dart';
 import 'package:flutter_todo_app/src/features/task/domain/task.dart';
@@ -35,54 +38,59 @@ class AddTask extends StatelessWidget {
         return Hero(
           tag: 'add_task',
           child: Scaffold(
-            appBar: AppBar(
-              title: Text(S.of(context).add_task),
-            ),
-            body: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 10.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    TaskTextField(
-                      flex: 1,
-                      controller: titleController,
-                      labelText: S.of(context).title,
-                      authofocus: true,
-                    ),
-                    const CalendarLine(title: 'Задачи'),
-                    TaskTextField(
-                      flex: 4,
-                      controller: descriptionController,
-                      maxLength: 1000,
-                      maxLines: 10,
-                      labelText: S.of(context).description,
-                      authofocus: false,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        FilledButton(
-                          onPressed: () {
-                            context.read<TaskBloc>().add(
-                                  CreateNewTask(
-                                    task: Task(
-                                      id: titleController.text.trim().length,
-                                      title: titleController.text.trim(),
-                                      description:
-                                          descriptionController.text.trim(),
-                                      createdDate: DateTime.now(),
-                                      deadlineDate: DateTime.now(),
-                                    ),
-                                  ),
-                                );
-                          },
-                          child: Text(S.of(context).add_task),
-                        ),
-                      ],
-                    )
-                  ],
+            body: BaseScreen(
+              headerContainerWidget: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                title: MainTitleTextWidget(
+                  screenTitle: S.of(context).add_task,
+                ),
+                actions: [
+                  IconButton(
+                    icon: const Icon(Icons.save),
+                    onPressed: () {
+                      context.read<TaskBloc>().add(
+                            CreateNewTask(
+                              task: Task(
+                                id: titleController.text.trim().length,
+                                title: titleController.text.trim(),
+                                description: descriptionController.text.trim(),
+                                deadlineDate: DateTime.now(),
+                              ),
+                            ),
+                          );
+                    },
+                  ),
+                ],
+              ),
+              bodyWidget: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: kTopPadding,
+                    left: kLeftPadding,
+                    right: kRightPadding,
+                    bottom: kBottomPadding,
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      TaskTextField(
+                        flex: 1,
+                        controller: titleController,
+                        labelText: S.of(context).title,
+                        authofocus: true,
+                      ),
+                      const CalendarLine(title: 'Задачи'),
+                      TaskTextField(
+                        flex: 4,
+                        controller: descriptionController,
+                        maxLength: 1000,
+                        maxLines: 10,
+                        labelText: S.of(context).description,
+                        authofocus: false,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

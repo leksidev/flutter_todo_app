@@ -16,7 +16,6 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
             title: event.task.title,
             description: event.task.description,
             deadlineDate: event.task.deadlineDate,
-            createdDate: event.task.createdDate,
           );
           tasks.add(task);
           if (task.title.isNotEmpty) {

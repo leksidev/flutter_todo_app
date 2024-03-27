@@ -48,5 +48,6 @@
   "tooShortPassword": "Слишком короткий пароль",
   "authenticationDataNotFound": "Данные аутентификации не найдены",
   "unknownAuthenticationException": "Неизвестная ошибка аутентификации",
-  "loginAndPasswordCanNotBeEmpty": "Логин и пароль не могут быть пустыми"
+  "loginAndPasswordCanNotBeEmpty": "Логин и пароль не могут быть пустыми",
+  "taskDetails": "Task details"
 }

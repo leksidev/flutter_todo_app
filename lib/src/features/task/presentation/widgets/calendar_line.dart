@@ -51,6 +51,7 @@ class _CalendarLineState extends State<CalendarLine> {
 
   Widget titleView() {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         currentDateTime.month == DateTime.now().month

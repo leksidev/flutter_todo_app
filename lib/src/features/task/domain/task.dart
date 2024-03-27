@@ -2,21 +2,23 @@ import 'package:equatable/equatable.dart';
 
 class Task extends Equatable {
   final int id;
+  final List<String> tags;
   final String title;
   final String description;
-  final DateTime createdDate;
-  final DateTime deadlineDate;
+  final DateTime createdDate = DateTime.now();
+  final DateTime? deadlineDate;
 
-  const Task(
-      {required this.id,
-      required this.title,
-      required this.description,
-      required this.createdDate,
-      required this.deadlineDate});
+  Task({
+    required this.id,
+    required this.title,
+    this.description = '',
+    this.deadlineDate,
+    this.tags = const [],
+  });
 
   @override
   String toString() {
-    return 'Task(id: $id, title: $title, description: $description, createdDate: $createdDate, deadlineDate: $deadlineDate)';
+    return 'Task(id: $id, title: $title, description: $description, createdDate: $createdDate)';
   }
 
   @override
