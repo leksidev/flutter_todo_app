@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_todo_app/src/constants/const_sizes.dart';
-
 class BaseScreen extends StatelessWidget {
   const BaseScreen({
     super.key,
     required this.headerContainerWidget,
+    required this.headerContainerHeight,
     required this.bodyWidget,
   });
 
   final Widget headerContainerWidget;
+  final double headerContainerHeight;
   final Widget bodyWidget;
 
   @override
@@ -19,13 +19,8 @@ class BaseScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          Container(
-            alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.only(
-              left: kLeftPadding,
-              bottom: kBottomPadding,
-            ),
-            height: MediaQuery.of(context).size.height * 0.2,
+          SizedBox(
+            height: headerContainerHeight,
             child: headerContainerWidget,
           ),
           Expanded(
