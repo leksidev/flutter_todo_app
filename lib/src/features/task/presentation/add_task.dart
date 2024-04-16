@@ -39,6 +39,7 @@ class AddTask extends StatelessWidget {
           tag: 'add_task',
           child: Scaffold(
             body: BaseScreen(
+              headerContainerHeight: MediaQuery.of(context).size.height * 0.12,
               headerContainerWidget: AppBar(
                 backgroundColor: Colors.transparent,
                 elevation: 0,
