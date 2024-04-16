@@ -42,6 +42,12 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    MainTasksScreenRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MainTasksScreen(),
+      );
+    },
     ProjectsScreenRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -52,12 +58,6 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const RegisterScreen(),
-      );
-    },
-    TasksScreenRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const TasksScreen(),
       );
     },
   };
@@ -160,6 +160,20 @@ class MainScreenRouteArgs {
 }
 
 /// generated route for
+/// [MainTasksScreen]
+class MainTasksScreenRoute extends PageRouteInfo<void> {
+  const MainTasksScreenRoute({List<PageRouteInfo>? children})
+      : super(
+          MainTasksScreenRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MainTasksScreenRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [ProjectsScreen]
 class ProjectsScreenRoute extends PageRouteInfo<void> {
   const ProjectsScreenRoute({List<PageRouteInfo>? children})
@@ -183,20 +197,6 @@ class RegisterScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'RegisterScreenRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [TasksScreen]
-class TasksScreenRoute extends PageRouteInfo<void> {
-  const TasksScreenRoute({List<PageRouteInfo>? children})
-      : super(
-          TasksScreenRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'TasksScreenRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

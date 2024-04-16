@@ -37,8 +37,8 @@ class MainScreen extends ConsumerWidget {
         return SafeArea(
           child: AutoTabsScaffold(
             routes: const [
+              MainTasksScreenRoute(),
               ProjectsScreenRoute(),
-              TasksScreenRoute(),
             ],
             floatingActionButton: FloatingActionButton(
               onPressed: () {
@@ -54,7 +54,7 @@ class MainScreen extends ConsumerWidget {
                 destinations: const [
                   NavigationDestination(
                     icon: Icon(Icons.home),
-                    label: 'Сводка',
+                    label: 'Задачи',
                     enabled: true,
                   ),
                   NavigationDestination(

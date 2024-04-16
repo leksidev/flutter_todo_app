@@ -5,8 +5,8 @@ import 'package:flutter_todo_app/src/features/main_panel/presentation/main_scree
 import 'package:flutter_todo_app/src/features/auth/presentation/login_screen.dart';
 import 'package:flutter_todo_app/src/features/auth/presentation/register_screen.dart';
 import 'package:flutter_todo_app/src/features/task/presentation/add_task.dart';
+import 'package:flutter_todo_app/src/features/main_panel/presentation/pages/main_tasks_screen.dart';
 import 'package:flutter_todo_app/src/features/main_panel/presentation/pages/projects_screen.dart';
-import 'package:flutter_todo_app/src/features/main_panel/presentation/pages/tasks_screen.dart';
 
 part 'router.gr.dart';
 
@@ -27,11 +27,11 @@ class AppRouter extends _$AppRouter {
           path: '/main',
           children: [
             AutoRoute(
-              page: ProjectsScreenRoute.page,
+              page: MainTasksScreenRoute.page,
               path: 'projects',
             ),
             AutoRoute(
-              page: TasksScreenRoute.page,
+              page: ProjectsScreenRoute.page,
               path: 'tasks',
             ),
           ],
