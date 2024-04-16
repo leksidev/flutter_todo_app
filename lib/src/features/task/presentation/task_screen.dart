@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/generated/l10n.dart';
-import 'package:flutter_todo_app/src/common_widgets/base_header.dart';
 import 'package:flutter_todo_app/src/common_widgets/base_screen.dart';
 import 'package:flutter_todo_app/src/common_widgets/gap.dart';
 import 'package:flutter_todo_app/src/common_widgets/main_title_text.dart';
@@ -20,45 +19,75 @@ class OneTaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog.fullscreen(
       child: BaseScreen(
-        headerContainerWidget: BaseHeaderWidget(
-          mainTitleTextWidget: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            title: MainTitleTextWidget(screenTitle: S.of(context).taskDetails),
-          ),
-          subTitleWidget: null,
+        headerContainerHeight: MediaQuery.of(context).size.height * 0.12,
+        headerContainerWidget: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: MainTitleTextWidget(screenTitle: S.of(context).taskDetails),
         ),
         bodyWidget: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
           children: [
             const Gap(size: kGapSizeVertical),
             MainTitleTextWidget(screenTitle: task.title),
             const Gap(size: kGapSizeVertical),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
+            Table(
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              columnWidths: const {0: FlexColumnWidth(1.0)},
+              border: TableBorder.all(width: 0, color: Colors.transparent),
               children: [
-                Column(
+                TableRow(
                   children: [
-                    Text('Задача создана',
-                        style: Theme.of(context).textTheme.labelSmall),
-                    Text(
-                      DateFormat('dd MMMM yyyy').format(task.createdDate),
-                      style: Theme.of(context).textTheme.bodyMedium,
+                    const TableCell(
+                      child: Text('Задача создана'),
+                    ),
+                    TableCell(
+                      child: Text(
+                        DateFormat('dd MMMM yyyy').format(task.createdDate),
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
                     ),
                   ],
                 ),
-                Column(
+                TableRow(
                   children: [
-                    Text('Срок выполнения',
-                        style: Theme.of(context).textTheme.labelSmall),
-                    Text(
-                        task.deadlineDate != null
-                            ? DateFormat('dd MMMM yyyy')
-                                .format(task.deadlineDate!)
-                            : '',
-                        style: Theme.of(context).textTheme.bodyMedium),
+                    const TableCell(
+                      child: Text('Постановщик'),
+                    ),
+                    TableCell(
+                      child: Text(
+                        task.id.toString(),
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    const TableCell(
+                      child: Text('Статус'),
+                    ),
+                    TableCell(
+                      child: Text(
+                        'В работе',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    const TableCell(
+                      child: Text('Проект'),
+                    ),
+                    TableCell(
+                      child: Text(
+                        'Project name',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -67,32 +96,31 @@ class OneTaskScreen extends StatelessWidget {
             Text(task.description),
             const Divider(),
             const Gap(size: kGapSizeVertical),
-            Wrap(
+            const Wrap(
               spacing: kGapSizeVertical,
               runSpacing: kGapSizeVertical,
               direction: Axis.horizontal,
-              alignment: WrapAlignment.center,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              runAlignment: WrapAlignment.center,
-              verticalDirection: VerticalDirection.down,
+              alignment: WrapAlignment.start,
               children: [
-                Container(
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey[200],
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: AssetImage('assets/images/cover.jpg'),
-                        radius: 20,
-                        child: Text('U'),
-                      ),
-                      Text('Username'),
-                    ],
-                  ),
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/cover.jpg'),
+                  radius: 20,
+                  child: Text('U'),
+                ),
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/cover.jpg'),
+                  radius: 20,
+                  child: Text('U'),
+                ),
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/cover.jpg'),
+                  radius: 20,
+                  child: Text('U'),
+                ),
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/cover.jpg'),
+                  radius: 20,
+                  child: Text('U'),
                 ),
               ],
             ),

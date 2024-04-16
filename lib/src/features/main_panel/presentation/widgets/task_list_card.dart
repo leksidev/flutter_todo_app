@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_todo_app/src/common_widgets/gap.dart';
 import 'package:flutter_todo_app/src/constants/const_sizes.dart';
 import 'package:flutter_todo_app/src/features/task/domain/task.dart';
 import 'package:flutter_todo_app/src/features/task/presentation/task_screen.dart';
@@ -34,40 +33,16 @@ class TaskListCard extends StatelessWidget {
           ),
           alignment: Alignment.centerLeft,
           child: Column(
-            // mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Chip(
-                label: const Text('Label'),
-                backgroundColor: Color(kColorsOfChips[0]),
-                labelStyle: Theme.of(context).textTheme.labelSmall,
-                elevation: kChipElevation,
-                shape: const StadiumBorder(
-                  side: BorderSide(
-                    color: Color(0xFFE0E0E0),
-                  ),
-                ),
-              ),
-              const Gap(
-                size: kGapSizeVertical,
-              ),
-              Text(
-                task.title,
-                style: Theme.of(context).textTheme.titleSmall,
-              ),
-              const Gap(
-                size: kGapSizeVertical,
-              ),
-              const LinearProgressIndicator(
-                value: 0.5,
-              ),
-              const Gap(
-                size: kGapSizeVertical,
-              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Text(
+                    task.title,
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
                   IconButton(
                     onPressed: () {},
                     icon: const Icon(
