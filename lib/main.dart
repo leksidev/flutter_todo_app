@@ -27,10 +27,11 @@ void main() async {
 
   runApp(
     ProviderScope(
-        child: MainApp(
-      theme: theme,
-      darkTheme: darkTheme,
-    )),
+      child: MainApp(
+        theme: theme,
+        darkTheme: darkTheme,
+      ),
+    ),
   );
 }
 
